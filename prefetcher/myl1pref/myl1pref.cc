@@ -4,6 +4,8 @@ uint32_t myl1pref::prefetcher_cache_operate(champsim::address addr, champsim::ad
                                       uint32_t metadata_in)
 {
   // assert(addr == ip); // Invariant for instruction prefetchers
+  champsim::block_number pf_addr{addr};
+  prefetch_line(champsim::address{pf_addr + 1}, true, metadata_in);
   return metadata_in;
 }
 
