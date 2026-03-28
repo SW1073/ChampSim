@@ -2,6 +2,7 @@
 #define PREFETCHER_NEXT_LINE_H
 
 #include <cstdint>
+#include <vector>
 
 #include "address.h"
 #include "modules.h"
@@ -18,7 +19,7 @@ struct domino : public champsim::modules::prefetcher {
   // void prefetcher_final_stats() {}
 
   typedef struct {
-      champsim::addres addr;
+      champsim::address addr;
   } HistoryTableEntry_t;
 
   typedef struct {

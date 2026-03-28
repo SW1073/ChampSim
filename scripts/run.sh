@@ -10,7 +10,10 @@ case $# in
         ;;
 esac
 
+WARM_INSTR=200000
+SIM_INSTR=500000
+
 bin/champsim \
-    --warmup_instructions 2000000 \
-    --simulation_instructions 5000000 \
+    --warmup_instructions ${WARM_INSTR} \
+    --simulation_instructions ${SIM_INSTR} \
     ${TRACE_PATH}
